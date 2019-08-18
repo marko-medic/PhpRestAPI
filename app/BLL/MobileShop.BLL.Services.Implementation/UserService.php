@@ -59,7 +59,7 @@ class UserService implements IUserService
     private function validateId(int $id)
     {
         if (empty($id) || $id <= 0) {
-            throw new \InvalidArgumentException("Id cannot be less than zero");
+            throw new \InvalidArgumentException("Id cannot be empty or less than zero");
         }
     }
 
@@ -69,5 +69,4 @@ class UserService implements IUserService
             }
 
         }
-
 }

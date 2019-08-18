@@ -6,7 +6,7 @@
  * Time: 7:18 PM
  */
 
-use MobileShop\Shared\Services\MobileShopServices;
+use MobileShop\BLL\Services\MobileShopServices;
 use MobileShop\BLL\Services\Implementation\MobileService\MobileShopService;
 use MobileShop\Shared\Models\Implementation\Mobile;
 use MobileShop\API\Controllers\BaseController;
@@ -42,6 +42,13 @@ class Mobiles extends BaseController
         echo json_encode($mobile);
     }
 
+    public function put($id, $mobileData) {
+        $this->httpPut();
+        $mobile = new Mobile($mobileData->name, $mobileData->price, $id);
+        $this->_mobileService->update($mobile);
+        echo json_encode($mobile);
+    }
+
     public function delete($id) {
         $this->httpDelete();
         $mobile = $this->_mobileService->find($id);
@@ -51,13 +58,5 @@ class Mobiles extends BaseController
         } else {
             echo json_encode($mobile);
         }
-    }
-
-    public function put($id, $mobileData) {
-        $this->httpPut();
-        $mobile = new Mobile($mobileData->name, $mobileData->price, $id);
-        $this->_mobileService->update($mobile);
-        echo json_encode($mobile);
-
     }
 }

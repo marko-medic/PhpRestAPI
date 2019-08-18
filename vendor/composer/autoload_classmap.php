@@ -6,11 +6,12 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'MobileShop\\API\\Controllers\\BaseController' => $baseDir . '/app/API/MobileShop.API.Controllers/BaseController.php',
+    'MobileShop\\API\\Controllers\\BaseController' => $baseDir . '/app/API/MobileShop.API.Controllers/MobileShop.API.Controllers.BaseController/BaseController.php',
     'MobileShop\\BLL\\Services\\Implementation\\MobileService' => $baseDir . '/app/BLL/MobileShop.BLL.Services.Implementation/MobileService.php',
     'MobileShop\\BLL\\Services\\Implementation\\UserService' => $baseDir . '/app/BLL/MobileShop.BLL.Services.Implementation/UserService.php',
     'MobileShop\\BLL\\Services\\Interfaces\\IMobileService' => $baseDir . '/app/BLL/MobileShop.BLL.Services.Interfaces/IMobileService.php',
     'MobileShop\\BLL\\Services\\Interfaces\\IUserService' => $baseDir . '/app/BLL/MobileShop.BLL.Services.Interfaces/IUserService.php',
+    'MobileShop\\BLL\\Services\\MobileShopServices' => $baseDir . '/app/BLL/MobileShop.BLL.Services/MobileShopServices.php',
     'MobileShop\\DAL\\Repositories\\DbService\\Implementation\\DbConnectionService' => $baseDir . '/app/DAL/MobileShop.DAL.Repositories.DbServices.Implementation/DbConnectionService.php',
     'MobileShop\\DAL\\Repositories\\DbService\\Implementation\\DbService' => $baseDir . '/app/DAL/MobileShop.DAL.Repositories.DbServices.Implementation/DbService.php',
     'MobileShop\\DAL\\Repositories\\DbService\\Interfaces\\IDbConnectionService' => $baseDir . '/app/DAL/MobileShop.DAL.Repositories.DbService.Interfaces/IDbConnectionService.php',
@@ -20,11 +21,10 @@ return array(
     'MobileShop\\DAL\\Repositories\\Repository\\Interfaces\\IMobileDAL' => $baseDir . '/app/DAL/MobileShop.DAL.Repositories.Repository.Interfaces/IMobileDAL.php',
     'MobileShop\\DAL\\Repositories\\Repository\\Interfaces\\IUserDAL' => $baseDir . '/app/DAL/MobileShop.DAL.Repositories.Repository.Interfaces/IUserDAL.php',
     'MobileShop\\Root\\ApplicationConfig\\Core' => $baseDir . '/app/Root/MobileShop.Root.ApplicationConfig/Core.php',
-    'MobileShop\\Shared\\Configs\\Constants' => $baseDir . '/app/Shared/MobileShop.Shared.Configs/Constants.php',
+    'MobileShop\\Shared\\Configs\\DbConstants' => $baseDir . '/app/Shared/MobileShop.Shared.Configs/DbConstants.php',
     'MobileShop\\Shared\\Helpers\\HelperClass' => $baseDir . '/app/Shared/MobileShop.Shared.Helpers/HelperClass.php',
     'MobileShop\\Shared\\Models\\Implementation\\Mobile' => $baseDir . '/app/Shared/MobileShop.Shared.Models.Implementation/Mobile.php',
     'MobileShop\\Shared\\Models\\Implementation\\User' => $baseDir . '/app/Shared/MobileShop.Shared.Models.Implementation/User.php',
     'MobileShop\\Shared\\Models\\Interfaces\\IMobile' => $baseDir . '/app/Shared/MobileShop.Shared.Models.Interfaces/IMobile.php',
     'MobileShop\\Shared\\Models\\Interfaces\\IUser' => $baseDir . '/app/Shared/MobileShop.Shared.Models.Interfaces/IUser.php',
-    'MobileShop\\Shared\\Services\\MobileShopServices' => $baseDir . '/app/Shared/MobileShop.Shared.Services/MobileShopServices.php',
 );

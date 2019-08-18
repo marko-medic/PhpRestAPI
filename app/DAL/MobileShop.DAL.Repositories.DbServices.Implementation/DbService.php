@@ -9,9 +9,10 @@
 namespace MobileShop\DAL\Repositories\DbService\Implementation;
 
 use PDO;
+use PDOException;
 use MobileShop\DAL\Repositories\DbService\Interfaces\IDbConnectionService;
 use MobileShop\DAL\Repositories\DbService\Interfaces\IDbService;
-use MobileShop\Shared\Configs\Constants;
+use MobileShop\Shared\Configs\DbConstants;
 
 class DbService implements IDbService
 {
@@ -88,8 +89,8 @@ class DbService implements IDbService
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ
         ];
         try {
-            $this->_conn = new PDO($this->_connectionService->getConnectionString(), Constants::USERNAME, Constants::PASSWORD, $options);
-        } catch (\PDOException $exception) {
+            $this->_conn = new PDO($this->_connectionService->getConnectionString(), DbConstants::USERNAME, DbConstants::PASSWORD, $options);
+        } catch (PDOException $exception) {
             die("Connection failed: " . $exception->getMessage());
         }
     }

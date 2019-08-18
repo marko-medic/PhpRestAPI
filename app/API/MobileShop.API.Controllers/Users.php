@@ -6,7 +6,7 @@
  * Time: 7:18 PM
  */
 
-use MobileShop\Shared\Services\MobileShopServices;
+use MobileShop\BLL\Services\MobileShopServices;
 use MobileShop\BLL\Services\Implementation\MobileService\MobileShopService;
 use MobileShop\Shared\Models\Implementation\User;
 use MobileShop\API\Controllers\BaseController;
@@ -43,22 +43,21 @@ class Users extends BaseController
         echo json_encode($user);
     }
 
-    public function delete($id) {
-        $this->httpDelete();
-        $user = $this->_userService->find($id);
-        $result = $this->_userService->remove($id);
-        if ($result === 0) {
-            echo false;
-        } else {
-            echo json_encode($user);
-        }
-    }
-
     public function put($id, $userData) {
         $this->httpPut();
         $user = new User($userData->name, $userData->email, $id);
         $this->_userService->update($user);
         echo json_encode($user);
+    }
 
+    public function delete($id) {
+        $this->httpDelete();
+        $user = $this->_userService->find($id);
+        $isDeleted = $this->_userService->remove($id);
+        if (!$isDeleted) {
+            echo false;
+        } else {
+            echo json_encode($user);
+        }
     }
 }

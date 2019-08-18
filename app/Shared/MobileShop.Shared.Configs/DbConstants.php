@@ -9,7 +9,7 @@
 namespace MobileShop\Shared\Configs;
 
 
-abstract class Constants
+abstract class DbConstants
 {
     const SERVERNAME = "localhost";
     const DB_NAME = "mobileshop";

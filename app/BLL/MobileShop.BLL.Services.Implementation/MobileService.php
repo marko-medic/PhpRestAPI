@@ -44,19 +44,19 @@ class MobileService implements IMobileService
     public function create(Mobile $mobile)
     {
         $this->validateMobile($mobile);
-        return $this->_mobileDAL->create($mobile);
+        $this->_mobileDAL->create($mobile);
     }
 
     public function update(Mobile $mobile)
     {
         $this->validateMobile($mobile);
         $this->validateId($mobile->id);
-        return $this->_mobileDAL->update($mobile);
+        $this->_mobileDAL->update($mobile);
     }
 
     private function validateId(int $id) {
         if (empty($id) || $id <= 0) {
-            throw new \InvalidArgumentException("Id cannot be less than zero");
+            throw new \InvalidArgumentException("Id cannot be empty or less than zero");
         }
     }
 

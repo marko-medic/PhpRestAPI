@@ -21,11 +21,12 @@ class ComposerStaticInit09e8986dc4f3d8926dfbe1fd147a7f41
     );
 
     public static $classMap = array (
-        'MobileShop\\API\\Controllers\\BaseController' => __DIR__ . '/../..' . '/app/API/MobileShop.API.Controllers/BaseController.php',
+        'MobileShop\\API\\Controllers\\BaseController' => __DIR__ . '/../..' . '/app/API/MobileShop.API.Controllers/MobileShop.API.Controllers.BaseController/BaseController.php',
         'MobileShop\\BLL\\Services\\Implementation\\MobileService' => __DIR__ . '/../..' . '/app/BLL/MobileShop.BLL.Services.Implementation/MobileService.php',
         'MobileShop\\BLL\\Services\\Implementation\\UserService' => __DIR__ . '/../..' . '/app/BLL/MobileShop.BLL.Services.Implementation/UserService.php',
         'MobileShop\\BLL\\Services\\Interfaces\\IMobileService' => __DIR__ . '/../..' . '/app/BLL/MobileShop.BLL.Services.Interfaces/IMobileService.php',
         'MobileShop\\BLL\\Services\\Interfaces\\IUserService' => __DIR__ . '/../..' . '/app/BLL/MobileShop.BLL.Services.Interfaces/IUserService.php',
+        'MobileShop\\BLL\\Services\\MobileShopServices' => __DIR__ . '/../..' . '/app/BLL/MobileShop.BLL.Services/MobileShopServices.php',
         'MobileShop\\DAL\\Repositories\\DbService\\Implementation\\DbConnectionService' => __DIR__ . '/../..' . '/app/DAL/MobileShop.DAL.Repositories.DbServices.Implementation/DbConnectionService.php',
         'MobileShop\\DAL\\Repositories\\DbService\\Implementation\\DbService' => __DIR__ . '/../..' . '/app/DAL/MobileShop.DAL.Repositories.DbServices.Implementation/DbService.php',
         'MobileShop\\DAL\\Repositories\\DbService\\Interfaces\\IDbConnectionService' => __DIR__ . '/../..' . '/app/DAL/MobileShop.DAL.Repositories.DbService.Interfaces/IDbConnectionService.php',
@@ -35,13 +36,12 @@ class ComposerStaticInit09e8986dc4f3d8926dfbe1fd147a7f41
         'MobileShop\\DAL\\Repositories\\Repository\\Interfaces\\IMobileDAL' => __DIR__ . '/../..' . '/app/DAL/MobileShop.DAL.Repositories.Repository.Interfaces/IMobileDAL.php',
         'MobileShop\\DAL\\Repositories\\Repository\\Interfaces\\IUserDAL' => __DIR__ . '/../..' . '/app/DAL/MobileShop.DAL.Repositories.Repository.Interfaces/IUserDAL.php',
         'MobileShop\\Root\\ApplicationConfig\\Core' => __DIR__ . '/../..' . '/app/Root/MobileShop.Root.ApplicationConfig/Core.php',
-        'MobileShop\\Shared\\Configs\\Constants' => __DIR__ . '/../..' . '/app/Shared/MobileShop.Shared.Configs/Constants.php',
+        'MobileShop\\Shared\\Configs\\DbConstants' => __DIR__ . '/../..' . '/app/Shared/MobileShop.Shared.Configs/DbConstants.php',
         'MobileShop\\Shared\\Helpers\\HelperClass' => __DIR__ . '/../..' . '/app/Shared/MobileShop.Shared.Helpers/HelperClass.php',
         'MobileShop\\Shared\\Models\\Implementation\\Mobile' => __DIR__ . '/../..' . '/app/Shared/MobileShop.Shared.Models.Implementation/Mobile.php',
         'MobileShop\\Shared\\Models\\Implementation\\User' => __DIR__ . '/../..' . '/app/Shared/MobileShop.Shared.Models.Implementation/User.php',
         'MobileShop\\Shared\\Models\\Interfaces\\IMobile' => __DIR__ . '/../..' . '/app/Shared/MobileShop.Shared.Models.Interfaces/IMobile.php',
         'MobileShop\\Shared\\Models\\Interfaces\\IUser' => __DIR__ . '/../..' . '/app/Shared/MobileShop.Shared.Models.Interfaces/IUser.php',
-        'MobileShop\\Shared\\Services\\MobileShopServices' => __DIR__ . '/../..' . '/app/Shared/MobileShop.Shared.Services/MobileShopServices.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

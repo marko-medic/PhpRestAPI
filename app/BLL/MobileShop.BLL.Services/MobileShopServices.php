@@ -6,7 +6,7 @@
  * Time: 6:20 PM
  */
 
-namespace MobileShop\Shared\Services;
+namespace MobileShop\BLL\Services;
 
 use MobileShop\BLL\Services\Implementation\MobileService;
 use MobileShop\BLL\Services\Implementation\UserService;
@@ -14,11 +14,11 @@ use MobileShop\DAL\Repositories\DbService\Implementation\DbConnectionService;
 use MobileShop\DAL\Repositories\DbService\Implementation\DbService;
 use MobileShop\DAL\Repositories\Repository\Implementation\MobileDAL;
 use MobileShop\DAL\Repositories\Repository\Implementation\UserDAL;
-use MobileShop\Shared\Configs\Constants;
+use MobileShop\Shared\Configs\DbConstants;
 
 class MobileShopServices
 {
-    public $connectionString = "mysql:host=".Constants::SERVERNAME.";dbname=".Constants::DB_NAME;
+    public $connectionString = "mysql:host=".DbConstants::SERVERNAME.";dbname=".DbConstants::DB_NAME;
 
     public function getMobileService() {
         return new MobileService(new MobileDAL($this->getDbService()));
