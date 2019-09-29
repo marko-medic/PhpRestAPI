@@ -16,6 +16,7 @@ use MobileShop\Shared\Models\Implementation\User;
 class UserDAL implements IUserDAL
 {
     private $_dbService;
+	
     public function __construct(DbService $dbService)
     {
         if (empty($dbService)) {
